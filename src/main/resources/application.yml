@@ -1,0 +1,25 @@
+#server:
+#  address: 192.168.8.109
+#  port: 8080
+#  servlet:
+#    context-path: /OrientCDH
+# 配置文件服务器入口
+server:
+  address: 192.168.6.31
+  port: 8080
+  servlet:
+    context-path: /OrientFileService
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/orient_cdh?serverTimezone=UTC
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
